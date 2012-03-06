@@ -9,6 +9,6 @@
 #import "Review.h"
 
 @implementation Review
-@synthesize reviewerName, text, score, numberOfHelpfulRatings, numberOfUnhelpfulRatings;
+@synthesize reviewerName, text, score, numberOfHelpfulRatings, numberOfUnhelpfulRatings;                
 
 @end
