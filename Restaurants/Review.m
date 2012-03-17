@@ -9,6 +9,12 @@
 #import "Review.h"
 
 @implementation Review
-@synthesize reviewerName, text, score, numberOfHelpfulRatings, numberOfUnhelpfulRatings;                
+@synthesize reviewerName, text, score, numberOfHelpfulRatings, numberOfUnhelpfulRatings;  
+
+-(float) helpfulPercentage
+{;
+    numberOfHelpfulRatings/(numberOfHelpfulRatings + numberOfUnhelpfulRatings);
+
+}
 
 @end
