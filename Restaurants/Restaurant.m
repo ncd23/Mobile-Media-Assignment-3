@@ -4,6 +4,7 @@
 //
 
 #import "Restaurant.h"
+#import "Review.h"
 
 
 @implementation Restaurant
@@ -13,6 +14,29 @@
 -(int)age
 {
     return 2012 - yearOpened;
+}
+
+-(Review*) mostHelpfulReview
+{
+    Review* mostHelpfulReview = nil;
+    
+    for (Review* review in reviews)
+    {
+        if (review.numberOfHelpfulRatings > 4)
+        {
+        if (mostHelpfulReview == nil){
+            mostHelpfulReview = review;
+        }
+        if(review.percentage > mostHelpfulReview.percentage)
+        {
+            mostHelpfulReview = review;
+        }
+    }
+}
+ 
+        NSLog (@"Review Text: %@", mostHelpfulReview.text);
+return mostHelpfulReview;
+  
 }
 
 @end

@@ -24,5 +24,6 @@
 @property(readwrite, strong) NSMutableArray* reviews;
 
 -(int)age;
+-(Review*) mostHelpfulReview;
 
 @end

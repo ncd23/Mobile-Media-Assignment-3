@@ -13,6 +13,7 @@
 @synthesize ageLabel;
 @synthesize helpfulReviewPercentageLabel;
 @synthesize helpfulReviewLabel;
+
 @synthesize star1;
 @synthesize star2;
 @synthesize star3;
@@ -66,8 +67,10 @@
     navigationHeader.title = [restaurant name];
     cuisineLabel.text = [restaurant cuisineType];
     ageLabel.text = [NSString stringWithFormat:@"Est. %i (%i years ago)", restaurant.yearOpened, [restaurant age]];
-    helpfulReviewLabel.text = [NSString stringWithFormat:@" %@ - %@", review1.text,  review1.reviewerName];
-    helpfulReviewPercentageLabel.text = [NSString stringWithFormat:@"Most helpful review - %i of %i found this review helpful", review1.numberOfHelpfulRatings, review1.numberOfHelpfulRatings + review1.numberOfUnhelpfulRatings];
+    
+    helpfulReviewLabel.text = [review1 text];
+    helpfulReviewPercentageLabel.text = [NSString stringWithFormat:@"Most helpful review - %i of %i found this review helpful", review1.numberOfHelpfulRatings, [review1 total]];
+    
     
 }
 
