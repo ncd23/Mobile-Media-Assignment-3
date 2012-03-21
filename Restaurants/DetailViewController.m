@@ -60,8 +60,19 @@
     review4.score = 4;
     review4.numberOfHelpfulRatings = 14;
     review4.numberOfUnhelpfulRatings = 5;
+    
+    Review* review5= [[Review alloc] init];
+    review5.text= @"I cannot stand this place. Food is disgusting and service is horrendous!";
+    review5.reviewerName = @"Nicole";
+    review5.score = 1;
+    review5.numberOfHelpfulRatings = 30;
+    review5.numberOfUnhelpfulRatings = 1;
+
  
-    restaurant.reviews = [[NSMutableArray alloc] initWithObjects: review1, review2, review3, review4, nil];
+    [restaurant.reviews addObject: review5];
+    
+         
+    restaurant.reviews = [[NSMutableArray alloc] initWithObjects: review1, review2, review3, review4, review5, nil];
     
     addressLabel.text = [restaurant address];
     navigationHeader.title = [restaurant name];
