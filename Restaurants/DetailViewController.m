@@ -93,22 +93,22 @@
         helpfulReviewPercentageLabel.text = [NSString stringWithFormat:@""];
     }
     
-    if(([restaurant averageCustomerReview] > 0.4) &&([restaurant averageCustomerReview] <= 1)){
+    if(([restaurant averageCustomerReview] > 0.4) &&([restaurant averageCustomerReview] < 1.5)){
     star1.image = [UIImage imageNamed:@"Star_ON.png"];
     }
     
-    if(([restaurant averageCustomerReview] >1.4) && ([restaurant averageCustomerReview] <=2)){
+    if(([restaurant averageCustomerReview] >1.4) && ([restaurant averageCustomerReview] < 2.5)){
         (star1.image = [UIImage imageNamed:@"Star_ON.png"]) &&
         (star2.image = [UIImage imageNamed:@"Star_ON.png"]);
     
     }
-    if(([restaurant averageCustomerReview] >2.4) && ([restaurant averageCustomerReview] <=3)){
+    if(([restaurant averageCustomerReview] >2.4) && ([restaurant averageCustomerReview] < 3.5)){
         (star1.image = [UIImage imageNamed:@"Star_ON.png"]) &&
         (star2.image = [UIImage imageNamed:@"Star_ON.png"]) &&
         (star3.image = [UIImage imageNamed:@"Star_ON.png"]);
         
     }
-    if(([restaurant averageCustomerReview] >3.4) && ([restaurant averageCustomerReview] <=4)){
+    if(([restaurant averageCustomerReview] >3.4) && ([restaurant averageCustomerReview] < 4.5)){
         (star1.image = [UIImage imageNamed:@"Star_ON.png"]) &&
         (star2.image = [UIImage imageNamed:@"Star_ON.png"]) &&
         (star3.image = [UIImage imageNamed:@"Star_ON.png"]) &&
