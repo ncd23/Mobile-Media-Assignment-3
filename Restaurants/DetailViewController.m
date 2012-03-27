@@ -120,16 +120,8 @@
         (star2.image = [UIImage imageNamed:@"Star_ON.png"]) &&
         (star3.image = [UIImage imageNamed:@"Star_ON.png"]) &&
         (star4.image = [UIImage imageNamed:@"Star_ON.png"]) && (star4.image = [UIImage imageNamed:@"Star_ON.png"]);
-        
     }
-
-
-
- 
-    
 }
-
-
 
 - (void)viewDidUnload
 {

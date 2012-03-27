@@ -39,15 +39,14 @@ return mostHelpfulReview;
   
 }
 
--(float) averageCustomerReview
-{
+-(float) averageCustomerReview{
     int sum=0;
-    for(Review* score in reviews)
+    for(Review* number in reviews)
     {
-        sum+= [score score];
+        sum+= [number score];
                 
 }
-    return sum / [reviews count];
+    return (float)sum / [reviews count];
 }
 
 @end
