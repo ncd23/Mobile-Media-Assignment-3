@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *ageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *helpfulReviewPercentageLabel;
 @property (weak, nonatomic) IBOutlet UILabel *helpfulReviewLabel;
+@property (strong, nonatomic) Restaurant *restaurant;
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *star1;
