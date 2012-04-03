@@ -9,6 +9,8 @@
 @implementation MasterViewController
 @synthesize restaurants;
 
+
+
 -(int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 1;
@@ -22,6 +24,17 @@
     cell.textLabel.text = currentRestaurant.name;
     cell.detailTextLabel.text = currentRestaurant.cuisineType;
     return cell;
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    DetailViewController* detailVC = (DetailViewController*)
+    [segue destinationViewController];
+    
+    UITableView* table = [self tableView];
+    NSIndexPath* indexPath = [table indexPathForSelectedRow];
+    Restaurant* currentRestaurant = [restaurants objectAtIndex:indexPath.row];
+    detailVC.restaurant = currentRestaurant;
 }
 
 - (void)awakeFromNib
@@ -85,13 +98,14 @@
     pioReview5.score = 1;
     pioReview5.numberOfHelpfulRatings = 5;
     pioReview5.numberOfUnhelpfulRatings = 1;
-    
+
     
     [piopio.reviews addObject: pioReview5];
     
     piopio.reviews = [[NSMutableArray alloc] initWithObjects: pioReview1, pioReview2, pioReview3, pioReview4, pioReview5, nil];
     
     [restaurants addObject: piopio];
+    
 
 	// Do any additional setup after loading the view, typically from a nib.
 }
