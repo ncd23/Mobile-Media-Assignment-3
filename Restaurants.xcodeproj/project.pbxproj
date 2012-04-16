@@ -19,6 +19,7 @@
 		0EE5A6E414BEB490006BB5E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5A6E314BEB490006BB5E1 /* AppDelegate.m */; };
 		0EE5A6EA14BEB491006BB5E1 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5A6E914BEB491006BB5E1 /* MasterViewController.m */; };
 		0EE5A6ED14BEB491006BB5E1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5A6EC14BEB491006BB5E1 /* DetailViewController.m */; };
+		482074ED153CE7E6001BEED6 /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482074EC153CE7E5001BEED6 /* ReviewViewController.m */; };
 		48342E0815362458009FE76E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EE5A6E514BEB491006BB5E1 /* MainStoryboard.storyboard */; };
 		488BF48314FD190700858A5D /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = 488BF48214FD190700858A5D /* Review.m */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,8 @@
 		0EE5A6E914BEB491006BB5E1 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MasterViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		0EE5A6EB14BEB491006BB5E1 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DetailViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		0EE5A6EC14BEB491006BB5E1 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DetailViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		482074EB153CE7E5001BEED6 /* ReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewViewController.h; sourceTree = "<group>"; };
+		482074EC153CE7E5001BEED6 /* ReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewViewController.m; sourceTree = "<group>"; };
 		488BF48114FD190700858A5D /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Review.h; sourceTree = "<group>"; };
 		488BF48214FD190700858A5D /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +113,8 @@
 				0EE5A6E214BEB490006BB5E1 /* AppDelegate.h */,
 				0EE5A6E314BEB490006BB5E1 /* AppDelegate.m */,
 				0EE5A6E514BEB491006BB5E1 /* MainStoryboard.storyboard */,
+				482074EB153CE7E5001BEED6 /* ReviewViewController.h */,
+				482074EC153CE7E5001BEED6 /* ReviewViewController.m */,
 				0EE5A6E814BEB491006BB5E1 /* MasterViewController.h */,
 				0EE5A6E914BEB491006BB5E1 /* MasterViewController.m */,
 				0EE5A6EB14BEB491006BB5E1 /* DetailViewController.h */,
@@ -203,6 +208,7 @@
 				0E02F6BD14CD10E300C3EAE8 /* Restaurant.m in Sources */,
 				0E2AFF8614DE3F3600456523 /* Mug.m in Sources */,
 				488BF48314FD190700858A5D /* Review.m in Sources */,
+				482074ED153CE7E6001BEED6 /* ReviewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
