@@ -7,24 +7,30 @@
 #import "MasterViewController.h"
 
 @implementation MasterViewController
+
 @synthesize restaurants;
 
 
 
 -(int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    NSLog(@"%i", [restaurants count]);
+    return [restaurants count];
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSString* cellIdentifier = @"RestaurantCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
     Restaurant* currentRestaurant= [restaurants objectAtIndex:indexPath.row];
     cell.textLabel.text = currentRestaurant.name;
     cell.detailTextLabel.text = currentRestaurant.cuisineType;
     return cell;
 }
+    
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -106,6 +112,58 @@
     
     [restaurants addObject: piopio];
     
+    
+    
+    Restaurant* cabana = [[Restaurant alloc] init];
+    
+    cabana.name = @"Cabana";
+    cabana.address = @"89 South Seaport\nNew York, NY 10128";
+    cabana.cuisineType = @"Cuban";
+    cabana.yearOpened = 1994;
+    
+    
+    Review* cabanaReview1 = [[Review alloc] init];
+    cabanaReview1.text = @"The best skirt steak and mojitos I've ever had!";
+    cabanaReview1.reviewerName = @"The Smiths";
+    cabanaReview1.score = 5;
+    cabanaReview1.numberOfHelpfulRatings = 12;
+    cabanaReview1.numberOfUnhelpfulRatings = 7;
+    
+    Review* cabanaReview2 = [[Review alloc] init];
+    cabanaReview2.text = @"Food is okay, service is slow and staff is unfriendly.";
+    cabanaReview2.reviewerName = @"Anonymous";
+    cabanaReview2.score = 2;
+    cabanaReview2.numberOfHelpfulRatings = 2;
+    cabanaReview2.numberOfUnhelpfulRatings = 6;
+    
+    Review* cabanaReview3 = [[Review alloc] init];
+    cabanaReview3.text = @"I love this place. Definitely try the empanadas, fried plantains, and the delicious mojitos! In nice weather you can sit on the balcony overlooking the seaport.";
+    cabanaReview3.reviewerName = @"Michelle Carr";
+    cabanaReview3.score = 5;
+    cabanaReview3.numberOfHelpfulRatings =17;
+    cabanaReview3.numberOfUnhelpfulRatings = 3;
+    
+    Review* cabanaReview4 = [[Review alloc] init];
+    cabanaReview4.text = @"The food is good, but the service is not so great. The waiter chased out after me asking for more money for his tip.";
+    cabanaReview4.reviewerName = @"Tod";
+    cabanaReview4.score = 4;
+    cabanaReview4.numberOfHelpfulRatings = 12;
+    cabanaReview4.numberOfUnhelpfulRatings = 5;
+    
+    Review* cabanaReview5= [[Review alloc] init];
+    cabanaReview5.text= @"I cannot stand this place. Food is disgusting and service is horrendous!";
+    cabanaReview5.reviewerName = @"Nicole";
+    cabanaReview5.score = 1;
+    cabanaReview5.numberOfHelpfulRatings = 4;
+    cabanaReview5.numberOfUnhelpfulRatings = 3;
+    
+    
+    [cabana.reviews addObject: cabanaReview5];
+    
+    cabana.reviews = [[NSMutableArray alloc] initWithObjects: pioReview1, cabanaReview2, cabanaReview3, cabanaReview4, cabanaReview5, nil];
+    
+    [restaurants addObject: cabana];
+    
 
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -142,6 +200,8 @@
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+@end
 
 /*
 // Override to support conditional editing of the table view.
@@ -181,4 +241,3 @@
 }
 */
 
-@end
