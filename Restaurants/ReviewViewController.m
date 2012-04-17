@@ -7,6 +7,7 @@
 //
 
 #import "ReviewViewController.h"
+#import "DetailViewController.h"
 
 @implementation ReviewViewController
 @synthesize restaurant;
@@ -22,13 +23,16 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString* cellIdentifier = @"ReviewCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    }
+    NSString* CellIdentifier = @"ReviewCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        
+        UILabel* reviewTextLabel=(UILabel*)[cell viewWithTag:1];
+        UILabel* reviewHelpfulnessLabel=(UILabel*) [cell viewWithTag:2];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"test"];
+    Review* reviewForIndexPath = [restaurant.reviews objectAtIndex:indexPath.row];
+    reviewTextLabel.text = reviewForIndexPath.text;
+    reviewHelpfulnessLabel.text = [NSString stringWithFormat:@"%i of %i found this review helpful", reviewForIndexPath.numberOfHelpfulRatings + reviewForIndexPath.numberOfHelpfulRatings];
+   
     
     return cell;
 }
@@ -36,3 +40,5 @@
 
 
 @end
+
+
