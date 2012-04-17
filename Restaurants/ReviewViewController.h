@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Restaurant.h"
+
+Restaurant* restaurant;
 
 @interface ReviewViewController : UITableViewController
+@property(readwrite, strong) Restaurant* restaurant;
+
+
 
 @end

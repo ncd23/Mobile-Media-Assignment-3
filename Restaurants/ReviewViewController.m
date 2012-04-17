@@ -9,13 +9,15 @@
 #import "ReviewViewController.h"
 
 @implementation ReviewViewController
+@synthesize restaurant;
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    
+    return [[restaurant reviews] count];
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
