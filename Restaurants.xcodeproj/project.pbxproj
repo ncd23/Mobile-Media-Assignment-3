@@ -21,6 +21,8 @@
 		0EE5A6ED14BEB491006BB5E1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5A6EC14BEB491006BB5E1 /* DetailViewController.m */; };
 		482074ED153CE7E6001BEED6 /* ReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 482074EC153CE7E5001BEED6 /* ReviewViewController.m */; };
 		48342E0815362458009FE76E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EE5A6E514BEB491006BB5E1 /* MainStoryboard.storyboard */; };
+		4877B7B4153E5B48007D8498 /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 4877B7B3153E5B48007D8498 /* heart.png */; };
+		4877B7B7153E5B5A007D8498 /* heart-selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 4877B7B6153E5B5A007D8498 /* heart-selected.png */; };
 		488BF48314FD190700858A5D /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = 488BF48214FD190700858A5D /* Review.m */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		0EE5A6EC14BEB491006BB5E1 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = DetailViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		482074EB153CE7E5001BEED6 /* ReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewViewController.h; sourceTree = "<group>"; };
 		482074EC153CE7E5001BEED6 /* ReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewViewController.m; sourceTree = "<group>"; };
+		4877B7B3153E5B48007D8498 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heart.png; path = ../heart.png; sourceTree = "<group>"; };
+		4877B7B6153E5B5A007D8498 /* heart-selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "heart-selected.png"; path = "../heart-selected.png"; sourceTree = "<group>"; };
 		488BF48114FD190700858A5D /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Review.h; sourceTree = "<group>"; };
 		488BF48214FD190700858A5D /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +73,8 @@
 		0E6F215314F9FDFC004F682D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4877B7B6153E5B5A007D8498 /* heart-selected.png */,
+				4877B7B3153E5B48007D8498 /* heart.png */,
 				0E6F215414F9FE0F004F682D /* Star_OFF.png */,
 				0E6F215514F9FE0F004F682D /* Star_ON.png */,
 			);
@@ -191,6 +197,8 @@
 				0E6F215614F9FE0F004F682D /* Star_OFF.png in Resources */,
 				0E6F215714F9FE0F004F682D /* Star_ON.png in Resources */,
 				48342E0815362458009FE76E /* MainStoryboard.storyboard in Resources */,
+				4877B7B4153E5B48007D8498 /* heart.png in Resources */,
+				4877B7B7153E5B5A007D8498 /* heart-selected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

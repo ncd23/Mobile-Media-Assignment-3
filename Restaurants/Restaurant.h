@@ -22,7 +22,9 @@
 @property(readwrite, strong) NSString* cuisineType;
 @property(readwrite) int yearOpened;
 @property(readwrite, strong) NSMutableArray* reviews;
+@property BOOL isFavorite;
 
+-(BOOL) isFavorite;
 -(int)age;
 -(Review*) mostHelpfulReview;
 -(float) averageCustomerReview;

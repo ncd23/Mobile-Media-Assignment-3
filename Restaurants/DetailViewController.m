@@ -15,6 +15,7 @@
 @synthesize helpfulReviewPercentageLabel;
 @synthesize helpfulReviewLabel;
 @synthesize restaurant;
+@synthesize favoriteButton;
 
 @synthesize star1;
 @synthesize star2;
@@ -82,6 +83,13 @@
         (star3.image = [UIImage imageNamed:@"Star_ON.png"]) &&
         (star4.image = [UIImage imageNamed:@"Star_ON.png"]) && (star4.image = [UIImage imageNamed:@"Star_ON.png"]);
     }
+    
+    if (restaurant.isFavorite){
+        favoriteButton.image = [UIImage imageNamed:@"heart-selected.png"];
+    }else{
+        favoriteButton.image = [UIImage imageNamed:@"heart.png"];
+    }
+
 }
 
 - (void)viewDidUnload
@@ -97,6 +105,7 @@
     [self setStar3:nil];
     [self setStar4:nil];
     [self setStar5:nil];
+    [self setFavoriteButton:nil];
     [super viewDidUnload];
 }
 
@@ -127,4 +136,13 @@
 }
 
 
+- (IBAction)markAsFavorite:(id)sender {
+    restaurant.isFavorite = !restaurant.isFavorite;
+    if (restaurant.isFavorite){
+    favoriteButton.image = [UIImage imageNamed:@"heart-selected.png"];
+    }else{
+        favoriteButton.image = [UIImage imageNamed:@"heart.png"];
+    }
+    
+}
 @end
